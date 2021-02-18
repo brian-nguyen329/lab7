@@ -12,6 +12,19 @@
   	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/introHCI.js"></script>
+
+	<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-190111028-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
 </head>
 
 <body>
@@ -21,6 +34,9 @@
 			<p>human-computer interaction &middot; social computing &middot; crowdsourcing</p>
 		</div>
 
+		{{#if viewAlt}}
+		<html> Min! <button class="likeBtn">Like</button></html>
+		{{else}}
 		<h4>Projects</h4>
 		{{#each projects}}
 			<div class="project" id="{{id}}">
@@ -34,6 +50,7 @@
 				</div>
 			</div>
 		{{/each}}
+		{{/if}}
 
 
 </body>
